@@ -35,7 +35,7 @@ return(
 <Routes>
     <Route path="/" element={<Home/>}></Route>
     <Route path="/student" element={
-        <Store.Provider value={[StdData]}>
+        <Store.Provider value={[StdData,setStdData]}>
                <Student/>
         </Store.Provider>
     }></Route>
@@ -43,13 +43,13 @@ return(
     <Route path="/contact" element={<Contact/>}></Route>
 
     <Route path="/editstudent" element={
-        <Store.Provider value={[StdData]}>
+        <Store.Provider value={[StdData,setStdData]}>
                <Editstudent/>
          </Store.Provider>
    }></Route>
 
 <Route path="/addstudent" element={
-    <Store.Provider value={[StdData]}>
+    <Store.Provider value={[StdData,setStdData]}>
     <Addstudent/>
 </Store.Provider>
 }></Route> 
